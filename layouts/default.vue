@@ -1,24 +1,22 @@
 <template>
   <div>
     
-    <!-- Navigation -->
-    <Navigation />
-    
     <!-- Content -->
     <nuxt />
 
     <!-- Footer -->
+    <PageFooter />
 
   </div>
 </template>
 
 <script>
-  
-  import Navigation from '../components/navigation.vue';
+
+  import PageFooter from '../components/footer.vue';
   
   export default {
     components: {
-      Navigation
+      PageFooter
     }
   }
 </script>
@@ -39,12 +37,28 @@ body {
   margin: 0px;
   background-color: #202225;
   color: #eff6ee;
+  overflow-x: hidden;
+}
+
+  .content-container {
+    height: calc(100vh - 160px);
+    display: grid;
+    align-items: center;
+  }
+
+a {
+  text-decoration: none;
 }
 
 .inner {
   max-width: 1300px;
-  padding: 40px 15px;
   margin: 0px auto;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 </style>

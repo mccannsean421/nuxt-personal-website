@@ -1,43 +1,57 @@
 <template>
   <div class="inner">
-    <div class="billboard">
-      <div class="billboard__bio">
-        <h1>Cormac McCann</h1>
-        <p>Hi, my name's Cormac and I'm an almost full stack developer from Dublin, Ireland</p>
-      </div>
+    
+    <!-- Header -->
+    <header>
+        <div>
+          <h1>Cormac McCann</h1>
+        </div>
+      
+        <div class="slogan">
+          Developer, Streamer, Blogger
+        </div>
+    </header>
 
-      <div class="billboard__profile-pic">
-        <img src="/profile.jpg" alt="Profile" />
-      </div>
+    
+    <div class="content-container">
+      <InContentNav />
     </div>
+  
   </div>
 </template>
 
 <script>
 
-export default {
+import InContentNav from '../components/in-content-nav.vue';
 
+export default {
+  components: {
+    InContentNav,
+  }
 }
 </script>
 
 <style scoped>
-
-  .billboard {
+  header {
     display: grid;
-    grid-template-columns: 1fr 1fr; 
+    grid-template-columns: 1fr 1fr;
     align-items: center;
-    padding: 40px 0px;
+    height: 80px;
   }
 
-  .billboard__profile-pic {
-    justify-content: center;
+  h1 {
+    margin: 0;
+    font-size: 28px;
+  }
+
+  .slogan {
     display: grid;
+    justify-content: end;
   }
 
-  .billboard__profile-pic > img {
-    height: 300px;
-    max-width: 300px;
-    border-radius: 50em;
+  a {
+    color: #fff;
+    text-transform: uppercase;
   }
 
 </style>
