@@ -1,8 +1,13 @@
 <template>
   <div>
     
+    <!-- Navigation -->
+    <Navigation />
+
     <!-- Content -->
+    <div class="inner">
     <nuxt />
+    </div>
 
     <!-- Footer -->
     <PageFooter />
@@ -13,10 +18,12 @@
 <script>
 
   import PageFooter from '../components/footer.vue';
+  import Navigation from '../components/navigation.vue';
   
   export default {
     components: {
-      PageFooter
+      PageFooter,
+      Navigation,
     }
   }
 </script>
@@ -40,11 +47,26 @@ body {
   overflow-x: hidden;
 }
 
-  .content-container {
-    height: calc(100vh - 160px);
-    display: grid;
-    align-items: center;
-  }
+.container {
+  height: calc(100vh - 160px);
+}
+
+h1 {
+  margin-bottom: 40px;
+  font-size: 32px;
+}
+
+h2 {
+  margin: 0px 0px 5px 0px;
+}
+
+.underline {
+  display: inline-block;
+  width: 25px;
+  height: 5px;
+  background-color: mediumseagreen;
+  margin-bottom: 20px;
+}
 
 a {
   text-decoration: none;
@@ -53,6 +75,7 @@ a {
 .inner {
   max-width: 1300px;
   margin: 0px auto;
+  padding: 0px 15px;
 }
 
 ul {

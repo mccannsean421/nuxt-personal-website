@@ -24,6 +24,10 @@ module.exports = {
   */
   loading: { color: '#fff' },
 
+  router: {
+    linkActiveClass: 'active-path'
+  },
+
   /*
   ** Global CSS
   */

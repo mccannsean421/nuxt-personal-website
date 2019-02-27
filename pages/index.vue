@@ -1,23 +1,12 @@
 <template>
-  <div class="inner">
-    
-    <!-- Header -->
-    <header>
-        <div>
-          <h1>Cormac McCann</h1>
-        </div>
-      
-        <div class="slogan">
-          Developer, Streamer, Blogger
-        </div>
-    </header>
 
-    
-    <div class="content-container">
-      <InContentNav />
+  <section class="container container--home">
+    <div>
+      <h1>Cormac McCann</h1>
+      <p>The story of my life.</p>
     </div>
+  </section>
   
-  </div>
 </template>
 
 <script>
@@ -26,7 +15,7 @@ import InContentNav from '../components/in-content-nav.vue';
 
 export default {
   components: {
-    InContentNav,
+    
   }
 }
 </script>
@@ -39,9 +28,14 @@ export default {
     height: 80px;
   }
 
+  .container--home {
+    display: grid;
+    align-items: center;
+  }
+
   h1 {
     margin: 0;
-    font-size: 28px;
+    font-size: 5vw;
   }
 
   .slogan {
