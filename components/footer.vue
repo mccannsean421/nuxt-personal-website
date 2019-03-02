@@ -23,6 +23,6 @@
     }
 
     a {
-        color: #50D67E;
+        color: var(--primary-color);
     }
 </style>

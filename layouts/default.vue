@@ -1,12 +1,12 @@
 <template>
-  <div>
+  <div :style="{ '--primary-color': primaryPageColor }">
     
     <!-- Navigation -->
     <Navigation />
 
     <!-- Content -->
     <div class="inner">
-    <nuxt />
+      <nuxt />
     </div>
 
     <!-- Footer -->
@@ -24,11 +24,44 @@
     components: {
       PageFooter,
       Navigation,
-    }
+    },
+    mounted: function() {
+      console.log(this.$route.path)
+    },
+    computed: {
+      primaryPageColor: function() {
+        switch(this.$route.path) {
+          case '/about':
+            return '#ab305e';
+            break;
+          case '/resume':
+            return '#456AEF';
+            break;
+          case '/portfolio':
+            return '#AB50D6';
+            break;
+          case '/contact':
+            return '#FB8C24';
+            break;
+          default:
+            return 'mediumseagreen';
+        }
+      }
+    },
+    watch: {
+      $route () {
+        console.log(this.$route.path)
+      }
+    },
   }
 </script>
 
 <style>
+
+:root {
+  --primary-color: mediumseagreen;
+}
+
 html {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
@@ -48,24 +81,39 @@ body {
 }
 
 .container {
-  height: calc(100vh - 160px);
+  min-height: calc(100vh - 160px);
+  margin-top: 40px;
 }
 
 h1 {
-  margin-bottom: 40px;
   font-size: 32px;
+  text-transform: uppercase;
+  margin: 0px;
 }
 
 h2 {
   margin: 0px 0px 5px 0px;
+  color: var(--primary-color);
+}
+
+.heading {
+  margin-bottom: 40px;
 }
 
 .underline {
   display: inline-block;
   width: 25px;
   height: 5px;
-  background-color: mediumseagreen;
-  margin-bottom: 20px;
+  background-color: var(--primary-color);
+}
+
+.date {
+  margin-bottom: 5px;
+}
+
+time {
+  color: #717171;
+  font-weight: bold;
 }
 
 a {
@@ -82,6 +130,15 @@ ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
+}
+
+.content-block {
+  margin: 40px 0px;
+}
+
+.para-container > p {
+  margin: 0px 0px 20px 0px;
+  font-size: 22px;
 }
 
 </style>

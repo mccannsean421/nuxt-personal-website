@@ -1,6 +1,74 @@
 <template>
   <section class="container">
-      <h1>Portfolio</h1>
+    <div class="heading">
+        <h1>Portfolio</h1>
+        <div class="underline"></div>
+    </div>
+
+        <!-- Bookies -->
+        <div class="content-block">
+            <h2>Bookies.com</h2>
+            
+            <div class="para-container">
+                <p>
+                    Bookies.com is an online Gambling portal that compares several 
+                    sportsbooks providers across The UK and United States. Bookies 
+                    is a powerful &amp; robust site, built using Vue JS
+                </p>
+            </div>
+        </div>
+
+        <!-- MWP -->
+        <div class="content-block">
+            <h2>MyWeekendProject.com</h2>
+            
+            <div class="para-container">
+                <p>
+                    My web development blog where I write tutorials, opinion pieces 
+                    and news updates for the industry. Originally built with Node JS, 
+                    Express, Pug and Stylus. With all content hosted on Contentful
+                </p>
+            </div>
+        </div>
+
+        <!-- MWP -->
+        <div class="content-block">
+            <h2>Android Slots</h2>
+            
+            <div class="para-container">
+                <p>
+                   The little sister site of Gambling.com, CasinoSource is a tool to compare the 
+                   best online casinos. Currently operating in 14 countries!
+                </p>
+            </div>
+        </div>
+
+        <!-- MWP -->
+        <div class="content-block">
+            <h2>Gambling.com</h2>
+            
+            <div class="para-container">
+                <p>
+                    Gambling.com is a comparison site for the best online Gambling sites 
+                    and games around the world. Currently operating across 11 countires, 
+                    in 6 languages
+                </p>
+            </div>
+        </div>
+
+        <!-- MWP -->
+        <div class="content-block">
+            <h2>Casino Source</h2>
+            
+            <div class="para-container">
+                <p>
+                   The little sister site of Gambling.com, CasinoSource is a tool to compare the 
+                   best online casinos. Currently operating in 14 countries!
+                </p>
+            </div>
+        </div>
+
+
   </section>
 </template>
 

@@ -63,7 +63,7 @@
     }
 
     .home-logo > a {
-        color: #50D67E;
+        color: var(--primary-color);
         font-weight: bold;
         font-size: 32px;
     }
@@ -90,15 +90,15 @@
     }
 
 
-
-
-
     .global-navigation__menu > ul > li > a {
         color: #fff;
+        font-size: 18px;
+        font-weight: bold;
+        text-transform: uppercase;
     }
 
     .global-navigation__menu > ul > li > a.active-path {
-        color: mediumseagreen;
+        color: var(--primary-color);
     }
 
 
@@ -106,7 +106,7 @@
         .global-navigation__menu {
             position: absolute;
             right: 100%;
-            background-color: mediumseagreen;
+            background-color: var(--primary-color);
             top: 80px;
         }
 
