@@ -1,5 +1,8 @@
 <template>
-    <header class="global-navigation inner">
+    <header 
+        class="global-navigation inner"
+        :class="{ 'global-navigation--scrolled': scrolling }"    
+    >
         <!-- Home Link -->
         <div class="home-logo">
             <nuxt-link to="/">
@@ -9,7 +12,13 @@
             
         <!-- Hamburger -->
         <div class="hamburger">
-            <button @click="toggleNav">menu</button>
+            <button 
+                @click="toggleNav"
+                :class="{ 'menu-open': navToggled }"
+            >
+                <img class="icon icon--hamburger" src="/hamburger.svg" alt="hamburger" />
+                <img class="icon icon--close" src="/close.svg" alt="hamburger" />
+            </button>
         </div>
 
         <!-- Menu -->
@@ -21,6 +30,7 @@
                 <li v-for="(item, index) in navItems" :key="index" >
                     <nuxt-link :to="item.path">
                         {{ item.text }}
+                        <div class="nav-underline"></div>
                     </nuxt-link>
                 </li>
             </ul>
@@ -40,6 +50,22 @@
                     {path:'/contact', text: 'Contact'},
                 ],
                 navToggled: false,
+                scrolling: false,
+            }
+        },
+        created: function() {
+            var self = this;
+
+            if(process.client) {
+                window.onscroll = function() {
+
+                    if((window.pageYOffset || document.documentElement.scrollTop) > 60) {
+                        console.log('!!!!!!!!');
+                        self.scrolling = true;
+                    } else {
+                        self.scrolling = false;
+                    }
+                }
             }
         },
         methods: {
@@ -57,6 +83,8 @@
         grid-template-columns: 1fr 1fr;
     }
 
+    
+
     .home-logo {
         display: grid;
         grid-template-columns: auto auto;
@@ -71,6 +99,28 @@
     .hamburger {
         display: grid;
         justify-content: end;
+    }
+
+    .hamburger > button {
+        background-color: transparent;
+        border: none;
+    }
+
+    .hamburger > button > .icon {
+        height: 40px;
+        width: 40px;
+    }
+
+    .icon--close {
+        display: none;
+    }
+
+    .menu-open > .icon--hamburger {
+        display: none;
+    }
+
+    .menu-open > .icon--close {
+        display: block;
     }
 
     @media screen and (min-width: 767px) {
@@ -97,17 +147,44 @@
         text-transform: uppercase;
     }
 
-    .global-navigation__menu > ul > li > a.active-path {
-        color: var(--primary-color);
+    .nav-underline {
+        width: 0px;
+        height: 5px;
+        background-color: var(--primary-color);
+        position: absolute;
+        margin: 0 auto;
+        transition: width .2s cubic-bezier(0.51, -0.38, 0.68, 1.86);
+        margin-top: 5px;
     }
 
+    a.active-path > .nav-underline {
+       width: 40px;
+    }
 
+    /* Mobile Styling */
     @media screen and (max-width: 766px) {
+        .global-navigation {
+            position: sticky;
+            top: 0;
+            background-color: var(--shark);
+        }
+
+        .nav-underline { 
+            display: none;
+        }
+
+        .global-navigation--scrolled {
+            box-shadow: 0px 0px 15px #000;
+        }
+        
         .global-navigation__menu {
             position: absolute;
             right: 100%;
             background-color: var(--primary-color);
-            top: 80px;
+            top: 60px;
+            border-radius: 4px;
+            overflow: hidden;
+            box-shadow: -5px 5px 10px #191919;
         }
 
         .global-navigation__menu > ul > li {
@@ -117,6 +194,10 @@
         .global-navigation__menu--toggled {
             right: 0%;
             margin: 0px 15px;
+        }
+
+        .global-navigation__menu > ul > li > a.active-path {
+            color: var(--shark);
         }
     }
 

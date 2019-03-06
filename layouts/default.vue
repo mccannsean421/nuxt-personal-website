@@ -60,6 +60,7 @@
 
 :root {
   --primary-color: mediumseagreen;
+  --shark: #202225;
 }
 
 html {
@@ -75,7 +76,7 @@ html {
 
 body {
   margin: 0px;
-  background-color: #202225;
+  background-color: var(--shark);
   color: #eff6ee;
   overflow-x: hidden;
 }
@@ -111,6 +112,14 @@ h2 {
   margin-bottom: 5px;
 }
 
+  input, 
+  select, 
+  textarea, 
+  button {
+
+    outline: none;
+  }
+
 time {
   color: #717171;
   font-weight: bold;
@@ -121,7 +130,7 @@ a {
 }
 
 .inner {
-  max-width: 1300px;
+  max-width: 1120px;
   margin: 0px auto;
   padding: 0px 15px;
 }

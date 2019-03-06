@@ -1,17 +1,26 @@
 <template>
   <section class="container">
-      <h1>Contact</h1>
+      <div class="heading">
+        <h1>Contact</h1>
+        <div class="underline"></div>
+      </div>
+
+      <ContactForm />
   </section>
 </template>
 
 <script>
 
+import ContactForm from './../components/contact-form.vue';
 
 export default {
-
+  components: {
+    ContactForm,
+  }
 }
 </script>
 
 <style>
+
 
 </style>
