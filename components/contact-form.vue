@@ -15,7 +15,7 @@
             </div>
 
             <div class="form-group">
-                <textarea placeholder="Your message">
+                <textarea placeholder="Your message" name="message">
 
                 </textarea>
             </div>
