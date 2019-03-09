@@ -1,6 +1,6 @@
 <template>
     <div>
-        <form name="contact" method="POST">
+        <form name="contact" method="POST" data-netlify="true">
             <div class="form-group">
                 <input type="text" name="email" placeholder="Email" />
             </div>
