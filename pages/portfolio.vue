@@ -73,10 +73,16 @@
 </template>
 
 <script>
-
-
 export default {
-
+    head: {
+        title: 'Portfolio - Cormac McCann',
+        meta: [
+            { 
+                hid: 'description', 
+                name: 'description', 
+                content: 'Some of my personal and professional projects.' }
+        ]
+    }
 }
 </script>
 

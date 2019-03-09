@@ -14,6 +14,15 @@
 import ContactForm from './../components/contact-form.vue';
 
 export default {
+  head: {
+      title: 'Contact - Cormac McCann',
+      meta: [
+          { 
+              hid: 'description', 
+              name: 'description', 
+              content: 'If you want to get in touch, feel free to contact me.' }
+      ]
+  },
   components: {
     ContactForm,
   }

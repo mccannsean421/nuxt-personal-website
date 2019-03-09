@@ -1,5 +1,5 @@
 <template>
-    <footer class="inner">
+    <footer class="">
         <p>
             Copyright 2019 Coramc McCann. Built with
             <a href="https://nuxtjs.org/" rel="nofollow" target="_blank">NuxtJS</a> 
@@ -28,7 +28,8 @@
         height: 80px;
         align-items: center;
         text-align: center;
-        padding: 40px 0px;
+        
+        font-size: 12px;
     }
 
     a {
@@ -56,6 +57,8 @@
             grid-template: 'disclaimer social-links' auto / 1fr 1fr;
             display: grid;
             text-align: left;
+            font-size: 14px;
+            padding: 40px 0px;
         }
         .social-links {
             display: grid;

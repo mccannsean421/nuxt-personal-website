@@ -1,11 +1,11 @@
 <template>
-  <div :style="{ '--primary-color': primaryPageColor }">
+  <div class="global-container inner" :style="{ '--primary-color': primaryPageColor }">
     
     <!-- Navigation -->
     <Navigation />
 
     <!-- Content -->
-    <div class="inner">
+    <div>
       <nuxt />
     </div>
 
@@ -20,7 +20,13 @@
   import PageFooter from '../components/footer.vue';
   import Navigation from '../components/navigation.vue';
   
-  export default {
+    export default {
+    head: {
+      link: [
+        { rel: 'icon', href: '/favicon.png' }
+      ]
+    },  
+    
     components: {
       PageFooter,
       Navigation,
@@ -81,9 +87,14 @@ body {
   overflow-x: hidden;
 }
 
+.global-container {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+
 .container {
-  min-height: calc(100vh - 160px);
-  margin-top: 40px;
+  padding-top: 40px;
 }
 
 h1 {

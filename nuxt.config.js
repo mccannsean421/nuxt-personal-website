@@ -15,7 +15,7 @@ module.exports = {
       { hid: 'description', name: 'description', content: pkg.description }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/png', href: '/favicon.png' }
     ]
   },
 
@@ -41,12 +41,13 @@ module.exports = {
   ],
 
   /*
-  ** Nuxt.js modules
+  ** Nuxt.js modules '@nuxtjs/pwa',
   */
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-    '@nuxtjs/pwa'
+    
+    '@nuxtjs/sitemap'
   ],
   /*
   ** Axios module configuration
@@ -65,5 +66,26 @@ module.exports = {
     extend(config, ctx) {
       
     }
+  },
+
+
+  /**
+   * Sitemap config
+   */
+
+  sitemap: {
+    path: '/sitemap.xml',
+    hostname: 'https://www.cormacmccann.app',
+    cacheTime: 1000 * 60 * 15,
+    gzip: true,
+    generate: false, // Enable me when using nuxt generate
+    routes: [
+      '/',
+      '/about',
+      '/portfolio',
+      '/resume',
+      '/contact',
+    ]
   }
+
 }

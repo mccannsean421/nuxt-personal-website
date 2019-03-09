@@ -1,6 +1,6 @@
 <template>
     <header 
-        class="global-navigation inner"
+        class="global-navigation"
         :class="{ 'global-navigation--scrolled': scrolling }"    
     >
         <!-- Home Link -->
@@ -80,7 +80,7 @@
 
     .global-navigation {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: auto 1fr;
     }
 
     
@@ -104,6 +104,7 @@
     .hamburger > button {
         background-color: transparent;
         border: none;
+        padding: 0;
     }
 
     .hamburger > button > .icon {
@@ -179,7 +180,7 @@
         
         .global-navigation__menu {
             position: absolute;
-            right: 100%;
+            display: none;
             background-color: var(--primary-color);
             top: 60px;
             border-radius: 4px;
@@ -193,7 +194,22 @@
 
         .global-navigation__menu--toggled {
             right: 0%;
+            display: block;
             margin: 0px 15px;
+            animation: POP-IN;
+            animation-iteration-count: 1;
+            animation-duration: .2s;
+            animation-timing-function: ease-out;
+        }
+
+        @keyframes POP-IN {
+            0% {
+                transform: scale(1);
+            }
+
+            100% {
+                transform: scale(1.1);
+            }
         }
 
         .global-navigation__menu > ul > li > a.active-path {
