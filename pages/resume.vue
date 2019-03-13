@@ -88,7 +88,10 @@ export default {
                     name: 'description', 
                     content: 'My Resume, a sumarry of my professional experience as a front end web developer.' }
             ]
-        }
+        },
+  transition: {
+    name: 'bounce',
+  },
 }
 </script>
 

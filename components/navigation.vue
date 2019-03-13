@@ -81,9 +81,9 @@
     .global-navigation {
         display: grid;
         grid-template-columns: auto 1fr;
+        align-items: center;
+        padding: 15px 0px;
     }
-
-    
 
     .home-logo {
         display: grid;
@@ -108,8 +108,8 @@
     }
 
     .hamburger > button > .icon {
-        height: 40px;
-        width: 40px;
+        height: auto;
+        width: 30px;
     }
 
     .icon--close {
@@ -118,6 +118,7 @@
 
     .menu-open > .icon--hamburger {
         display: none;
+
     }
 
     .menu-open > .icon--close {
@@ -168,6 +169,8 @@
             position: sticky;
             top: 0;
             background-color: var(--shark);
+            margin: 0px -15px;
+            padding: 0px 15px;
         }
 
         .nav-underline { 

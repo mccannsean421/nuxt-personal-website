@@ -93,7 +93,10 @@
                     name: 'description', 
                     content: 'Hey there! I’m Cormac McCann, a front-end web develepor who makes first class web experiences.' }
             ]
-        }
+        },
+        transition: {
+            name: 'bounce',
+        },
     }
 </script>
 

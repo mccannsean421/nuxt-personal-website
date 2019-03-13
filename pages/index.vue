@@ -23,6 +23,9 @@ export default {
               content: "My name Cormac and I'm a front-end web developer living and working in Dublin, Ireland" }
       ]
   },
+  transition: {
+    name: 'bounce',
+  },
 }
 </script>
 

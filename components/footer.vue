@@ -25,11 +25,10 @@
 <style scoped>
     footer {
         color: #989898;
-        height: 80px;
         align-items: center;
         text-align: center;
-        
         font-size: 12px;
+        padding-bottom: 15px;
     }
 
     a {
@@ -45,8 +44,6 @@
         padding: 0px 10px;
     }
 
-
-
     .social-links > ul > li:last-child:after {
         content: '';
     }
@@ -58,7 +55,7 @@
             display: grid;
             text-align: left;
             font-size: 14px;
-            padding: 40px 0px;
+            padding-bottom: 0px;
         }
         .social-links {
             display: grid;

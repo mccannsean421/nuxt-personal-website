@@ -7,7 +7,11 @@
 
         <!-- Bookies -->
         <div class="content-block">
-            <h2>Bookies.com</h2>
+            <h2>
+                <a href="https://www.bookies.com" rel="nofollow">
+                    Bookies.com
+                </a>
+            </h2>
             
             <div class="para-container">
                 <p>
@@ -20,7 +24,11 @@
 
         <!-- MWP -->
         <div class="content-block">
-            <h2>MyWeekendProject.com</h2>
+            <h2>
+                <a href="https://www.myweekendproject.com" rel="nofollow">
+                    MyWeekendProject.com
+                </a>
+            </h2>
             
             <div class="para-container">
                 <p>
@@ -33,7 +41,11 @@
 
         <!-- MWP -->
         <div class="content-block">
-            <h2>Android Slots</h2>
+            <h2>
+                <a href="https://www.androidslots.co.uk" rel="nofollow">
+                    Android Slots
+                </a>        
+            </h2>
             
             <div class="para-container">
                 <p>
@@ -45,7 +57,11 @@
 
         <!-- MWP -->
         <div class="content-block">
-            <h2>Gambling.com</h2>
+            <h2>
+                <a href="https://www.gambling.com" rel="nofollow">
+                    Gambling.com
+                </a>
+            </h2>
             
             <div class="para-container">
                 <p>
@@ -58,7 +74,11 @@
 
         <!-- MWP -->
         <div class="content-block">
-            <h2>Casino Source</h2>
+            <h2>
+                <a href="https://www.casinosource.co.uk" rel="nofollow">
+                    Casino Source
+                </a>
+            </h2>
             
             <div class="para-container">
                 <p>
@@ -82,10 +102,14 @@ export default {
                 name: 'description', 
                 content: 'Some of my personal and professional projects.' }
         ]
-    }
+    },
+
+    transition: 'bounce',   
 }
 </script>
 
-<style>
-
+<style scoped>
+    h2 > a {
+        color: var(--primary-color);
+    }
 </style>
