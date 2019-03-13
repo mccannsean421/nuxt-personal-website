@@ -46,9 +46,22 @@ module.exports = {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-    
-    '@nuxtjs/sitemap'
+    '@nuxtjs/sitemap',
+    '@nuxtjs/pwa',
   ],
+
+  icon: {
+    iconSrc: './static/app-icon.png',
+  },
+
+  manifest: {
+    short_name: 'CMC',
+    name: 'Cormac McCann',
+    start_url: '/',
+    theme_color: '#202225'
+
+  },
+
   /*
   ** Axios module configuration
   */
