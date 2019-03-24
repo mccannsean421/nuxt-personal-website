@@ -26,9 +26,6 @@ export default {
   components: {
     ContactForm,
   },
-  transition: {
-    name: 'bounce',
-  },
 }
 </script>
 

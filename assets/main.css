@@ -6,20 +6,12 @@
     animation: bounce-out .5s;
 }
 
-.fwesda-enter-active {
-    animation: fwesda-in .5s;
-}
-
-.fwesda-leave-active {
-    animation: fwesda-out .5s;
-}
-
 .page-enter-active, .page-leave-active {
     transition: opacity .5s
 }
 
 .page-enter, .page-leave-active {
-opacity: 0
+    opacity: 0
 }
 
 @keyframes fwesda-in {

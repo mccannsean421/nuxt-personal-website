@@ -80,18 +80,16 @@
 
 
 export default {
-        head: {
-            title: 'Resume - Coramc McCann',
-            meta: [
-                { 
-                    hid: 'description', 
-                    name: 'description', 
-                    content: 'My Resume, a sumarry of my professional experience as a front end web developer.' }
-            ]
-        },
-  transition: {
-    name: 'bounce',
-  },
+    head: {
+        title: 'Resume - Coramc McCann',
+        meta: [
+            { 
+                hid: 'description', 
+                name: 'description', 
+                content: 'My Resume, a sumarry of my professional experience as a front end web developer.' }
+        ]
+    },
+    transition: { },
 }
 </script>
 

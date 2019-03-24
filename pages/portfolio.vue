@@ -103,8 +103,6 @@ export default {
                 content: 'Some of my personal and professional projects.' }
         ]
     },
-
-    transition: 'bounce',   
 }
 </script>
 
