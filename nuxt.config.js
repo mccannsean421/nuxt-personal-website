@@ -49,6 +49,9 @@ module.exports = {
     '@nuxtjs/axios',
     '@nuxtjs/sitemap',
     '@nuxtjs/pwa',
+    ['@nuxtjs/google-analytics', {
+      id: 'UA-102849944-1'
+    }],
   ],
 
   icon: {
