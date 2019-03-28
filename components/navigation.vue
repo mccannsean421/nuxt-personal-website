@@ -72,6 +72,11 @@
             toggleNav: function() {
                 this.navToggled = !this.navToggled;
             }
+        },
+        watch: {
+            $route: function() {
+                this.navToggled = false;
+            },
         }
     }
 </script>
@@ -170,7 +175,7 @@
             top: 0;
             background-color: var(--shark);
             margin: 0px -15px;
-            padding: 0px 15px;
+            padding: 15px 15px 0px 15px;
         }
 
         .nav-underline { 

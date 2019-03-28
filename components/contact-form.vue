@@ -75,6 +75,7 @@
         select, 
         textarea {
             width: 90%;
+            padding: 1em 0em;
         }
   }
 

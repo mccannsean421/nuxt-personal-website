@@ -87,6 +87,10 @@ body {
   overflow-x: hidden;
 }
 
+.highlight {
+  color: var(--primary-color);
+}
+
 .global-container {
   display: grid;
   grid-template-rows: auto 1fr auto;
@@ -159,6 +163,7 @@ ul {
 .para-container > p {
   margin: 0px 0px 20px 0px;
   font-size: 22px;
+  line-height: 1.6;
 }
 
 </style>

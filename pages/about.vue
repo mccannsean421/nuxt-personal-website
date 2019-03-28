@@ -10,8 +10,8 @@
             <h2> TLDR </h2>
             <div class="para-container">
                 <p>
-                    Hey there! I’m Cormac McCann, a front-end web develepor who makes first 
-                    class web experiences.
+                    My name is Cormac McCann, I make first class web experiences. 
+                    I am a <span class="highlight">frontend web developer</span> with over three years of enterprise level experience. 
                 </p>
             </div>
         </div>
