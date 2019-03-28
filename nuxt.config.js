@@ -1,6 +1,5 @@
 const pkg = require('./package')
 
-
 module.exports = {
   mode: 'universal',
 
@@ -95,7 +94,7 @@ module.exports = {
     hostname: 'https://www.cormacmccann.app',
     cacheTime: 1000 * 60 * 15,
     gzip: true,
-    generate: false, // Enable me when using nuxt generate
+    generate: true, // Enable me when using nuxt generate
     routes: [
       '/',
       '/about',
